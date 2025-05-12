@@ -1,0 +1,1337 @@
+/* Importing Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Protest+Revolution&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Protest+Revolution&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Protest+Revolution&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* Universal Styles */
+*{
+    font-family: "Protest Revolution", 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/* Setting all links to have no underlines */
+a{
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    
+}
+
+@media screen and (max-width:768px){
+    body{
+        max-width: 100vw;
+        overflow-x: hidden;
+        max-height: 5vh;
+    }
+}
+/* HEADER STYLES */
+.hero-con{
+    background: linear-gradient(320deg,#eb92be,#ffef78,#63c9b4);
+}
+header{
+    z-index: 2;
+    width: 100vw;
+    background-color: transparent;
+    position: relative;
+}
+header .topbar{
+    height: 4.5vw;
+    background-color: transparent;
+    display: flex;
+
+}
+
+header .topbar figure{
+    padding-left: 4vw;
+    padding-top: 1vw;
+    height: 3vw;
+    width: 12vw;
+
+    margin-left: 0;
+}
+
+header .topbar figure img{
+    height: 3vw;
+    width: 12vw;
+}
+header .topbar ul{
+    height: 4vw;
+    list-style-type: none;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10vw;
+    margin-top: 0.3vw;
+}
+
+header .topbar ul li{
+    /* height: auto;
+    width: auto; */
+    font-size: 1.2vw;
+    margin-left: 2.3vw;
+    padding: 0.4vw;
+    border-radius: 1.33vw;
+}
+header .topbar nav ul li:hover{
+    background-color: black;
+}
+header .topbar nav ul li:hover a{
+    color: #fff;
+} 
+
+header .topbar ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+header .topbar button{
+    margin-top: 0.9vw;
+    background-color: black;
+    /* color: #fff; */
+    height: 3vw;
+    width: 7vw;
+    margin-left: 4vw;
+    border-radius: 2vw;
+    font-size: 1.2vw;
+}
+header .topbar button a{
+    color:#fff
+}
+
+header .topbar .shopping-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    height: 2.6vw;
+    width: 2.6vw;
+    color: black;
+    margin-left: 3.3vw;
+    margin-top: 0.9vw;
+    font-size: 1.2vw;
+    border-radius: 1.3vw;
+}
+header .topbar .shopping-cart:hover{
+    color: #fff;
+    background-color: black;
+}
+header .topbar .language{
+    color: #fff;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    height: 2.6vw;
+    width: 2.6vw;
+    padding-top: 0.5vw;
+    margin-left: 3.3vw;
+    margin-top: 0.9vw;
+    font-size: 1.2vw;
+    border-radius: 1.3vw;
+}
+.language p{
+    font-size: 1.2vw;
+}
+
+
+/* Hide hamburger by default */
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    /* margin-left: auto;
+    margin-left: 20vh; */
+    /* margin-right: 20px;
+    margin-top: 10px; */
+}
+
+
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+    
+    
+    .hamburger {
+        display: flex;
+        margin-left: 1vw;
+        align-items: center;
+        justify-content: center;
+        z-index: 120;
+    }
+
+    .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 1);
+    z-index: 100;
+    transition: left 0.5s ease-in-out;
+    padding-top: 20vh;
+    padding-left: 5vw;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items:start;
+        justify-content: flex-start;
+        gap: 3vh;
+        margin: 0;
+        list-style: none;
+        /* background-color: white; */
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+        color: black;
+    }
+
+    header .topbar ul li{
+        background-color: white;
+    }
+    header .topbar ul li a{
+        color: black;
+    }
+
+    header .topbar ul li{
+        /* height: auto;
+        width: auto; */
+        font-size: 6vw;
+        margin-left: 4.6vw;
+        padding: 0.8vw;
+        border-radius: 2.6vw;
+    }
+
+
+
+    header{
+        z-index: 2;
+        width: 100vw;
+        background-color: transparent;
+        position: relative;
+    }
+    header .topbar{
+        height: 10vw;
+        background-color: transparent;
+        display: flex;
+    }
+    
+    header .topbar figure{
+        padding-top: 2vw;
+        height: 6vw;
+        width: 26vw;
+        
+        margin-left: 27vw;
+    }
+    
+    header .topbar figure img{
+        height: 6vw;
+        width: 24vw;
+    }
+
+    header .topbar button{
+        margin-top: 1.8vw;
+        background-color: black;
+        /* color: #fff; */
+        height: 6vw;
+        width: 14vw;
+        margin-left: 14vw;
+        border-radius: 4vw;
+        font-size: 2.4vw;
+    }
+    header .topbar button a{
+        color:#fff
+    }
+    
+    header .topbar .shopping-cart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+        height: 5.2vw;
+        width: 5.2vw;
+        color: black;
+        margin-left: 1vw;
+        margin-top: 2vw;
+        font-size: 2.4vw;
+        border-radius: 50%;
+        padding: 0.5vw 0.5vw 0 0;
+    }
+    /* .shopping-cart i{
+        margin: 0.5vw 0.5vw 0 0;
+    } */
+    header .topbar .shopping-cart:hover{
+        color: #fff;
+        background-color: black;
+    }
+    header .topbar .language{
+
+        display: none;
+    }
+    .language p{
+        font-size: 1.2vw;
+    }
+
+    header .topbar ul{
+        padding-left: 0;
+        margin-top: 0;
+        height: auto;
+
+        align-items: normal;
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+}
+
+
+
+
+/* MAIN STYLES */
+main{
+    width: 100vw;
+    position: relative;
+    top: 0;
+    z-index: 0;
+}
+
+main #hero-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(320deg,#eb92be,#ffef78,#63c9b4);
+    height: 48.31vw;
+    width: 100%;
+}
+main #hero-text h1{
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 900;
+    font-size: 8vw;
+    letter-spacing: 0.6vw;
+}
+main #hero-text p{
+    font-size: 1.5vw;
+    padding-right: 4.6vw;
+}
+
+main #fig1{
+    height: 33.33vw;
+    width: 33.33vw;
+    position: absolute;
+    z-index: 6;
+    top: 6.6vw;
+    right: 2vw;
+    animation-name: fig1-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes fig1-animation{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(10px);}
+    100%{transform: translateY(0px);}
+}
+main #fig1 img{
+    height: 33.33vw;
+    width: 33.33vw;
+}
+
+main #fig2{
+    height: 13.33vw;
+    width: 13.33vw;
+    position: absolute;
+    z-index: 6;
+    top: 26.66vw;
+    left: 13.33vw;
+    animation-name: fig2-animation;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+@keyframes fig2-animation{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(5px);}
+    100%{transform: translateY(0px);}
+}
+main #fig2 img{
+    height: 13.33vw;
+    width: 13.33vw;
+    transform: scaleX(-1);
+}
+
+main #fig3{
+    height: 13.33vw;
+    width: 13.33vw;
+    position: absolute;
+    z-index: 6;
+    top: 6.66vw;
+    left: 11.33vw;
+    animation-name: fig3-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+@keyframes fig3-animation{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(4px);}
+    100%{transform: translateY(0px);}
+}
+main #fig3 img{
+    height: 13.33vw;
+    width: 13.33vw;
+}
+
+@media screen and (max-width: 600px) {
+    main{
+        width: 100vw;
+        position: relative;
+        top: 0;
+        z-index: 0;
+    }
+
+    main #hero-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background:linear-gradient(320deg,#eb92be,#ffef78,#63c9b4);
+        height: 85vh;
+        width: 100%;
+    }
+    main #hero-text h1{
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: 900;
+        font-size: 12vw;
+        letter-spacing: 1.2vw;
+    }
+    main #hero-text p{
+        font-size: 3vw;
+        padding-right: 9.2vw;
+    }
+
+  
+    main #fig1,
+    main #fig2,
+    main #fig3 {
+      display: none; /* Hide floating images on small screens to reduce clutter */
+    }
+
+    
+  }
+  
+
+aside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4vw;
+    width: 100vw;
+    background-color: #FECDAA;
+}
+aside h5,p{
+    display: inline;
+    font-size: 1.3vw;
+    font-weight: 500;
+    margin-bottom: 3.33vw;
+}
+aside marquee{
+    height: 100%;
+    font-size:1.5vw;
+}
+aside marquee img{
+    position: relative;
+    top: 0.66vw;
+    height: 2.66vw;
+    width: 2.66vw;
+}
+
+@media screen and (max-width: 600px) {
+    aside{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+        width: 100vw;
+        background-color: #FECDAA;
+        padding-top: 3.33vw;
+    }
+    aside h5,p{
+        display: inline;
+        font-size: 4vw;
+        font-weight: 500;
+        
+    }
+    aside marquee{
+        height: 100%;
+        font-size: 3vw;
+    }
+
+    aside marquee img{
+        position: relative;
+        top: 1.2vw;
+        height: 5.2vw;
+        width: 5.2vw;
+}
+
+}
+
+/* SECTION 2 - Products STYLES */
+
+#products{
+    padding: 3.33vw;
+    height: auto;
+    background-color: white;
+}
+
+#products h3{
+    font-family: "ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 2vw;
+    letter-spacing: 0.06vw;
+    color: #507DBC;
+}
+
+#container-for-boxes{
+    height: 47vw;
+    width: 80vw;
+    margin-left: 5vw;
+    margin-top: 3.33vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box{
+    height: 20vw;
+    width: 16.66vw;
+    margin-left: 2vw;
+    padding-left: 0.33vw;
+    padding-top: 0.33vw;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: -0.26vw -0.26vw 0.52vw rgb(0,0,0,0.2),0.26vw 0.26vw 0.52vw rgba(0,0,0,0.2);
+}
+.box figure{
+    height: 16.66vw;
+    width: 16vw;
+}
+.box figure img{
+    height: 16.66vw;
+    width: 16vw;
+}
+.box p{
+    font-family: "ubuntu", sans-serif;
+}
+@media screen and (max-width: 600px) {
+    #products h3{
+        font-size: 9vw;
+    }
+  #container-for-boxes {
+    height: auto;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .box {
+    width: 45%;
+    height: 45%;
+    margin-left: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: white;
+  }
+
+  .box figure {
+    width: 100%;
+    height: auto;
+  }
+
+  .box figure img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.product-pencil figure{
+    background-color: lightblue;
+}
+.product-pen figure{
+    background-color: #BAD4AA;
+}
+.product-notebook figure{
+    background-color: #9DCDC0;
+}
+.product-paint figure{
+    background-color: #F49097;
+}
+.product-scissors figure{
+    background-color: #AAA1C8;
+}
+.product-calender figure{
+    background-color: #3C6E71;
+}
+.product-technology figure{
+    background-color: #D4D4AA;
+}
+.product-gifts figure{
+    background-color: #EF8354;
+}
+
+
+/* SECTION 3 ARTS LEAGUE */
+
+.arts-league-section{
+    display: flex;
+    padding: 10vw 0 5vw 10vw;
+}
+.arts-league-section img:first-of-type{
+    height: 33.33vw;
+    width: 20vw;
+    transform: rotate(-90deg);
+    margin-top: 0;
+}
+.art-league-text{
+    margin-top: 9.66vw;
+}
+.art-league-text h2{
+    font-size: 3vw;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #00798C;
+    font-weight: 900;
+    letter-spacing: 0.2vw;
+    margin-bottom: 0.66vw;
+}
+.art-league-text  h3{
+    font-size: 1.5vw;
+    color: #00798C;
+    font-weight: 300;
+    margin-bottom: 1.33vw;
+    letter-spacing: 0.0667vw;
+}
+.art-league-text p{
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: red;
+    font-family: "ubuntu", sans-serif;
+    letter-spacing: 0.14vw;
+}
+.art-league-text button{
+    height: 2vw;
+    width: 6.67vw;
+    color: black;
+    background-color: yellow;
+    border: 0.134vw solid black;
+    border-radius: 2vw;
+    margin-top: 1.33vw;
+
+}
+.arts-league-section img:nth-of-type(2){
+    height: 26.67vw;
+    width: 20vw;
+}
+.arts-league-section img:last-of-type{
+    height: 26.67vw;
+    width: 26.67vw;
+}
+.custom-shape-divider-top-1745301266 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-top-1745301266 .shape-fill {
+    fill: #C2DCEE;
+}
+.custom-shape-divider-bottom-1745301672 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1745301672 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 129px;
+}
+
+.custom-shape-divider-bottom-1745301672 .shape-fill {
+    fill: #BF79D8;
+}
+
+@media screen and (max-width: 768px) {
+    .arts-league-section {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20vw;
+        padding-bottom: 20vw;
+        height: auto;
+        padding-left: 0;
+    }
+
+    .arts-league-section img:first-of-type {
+        width: 60vw;
+        height: auto;
+        transform: rotate(0deg); /* Remove rotate on mobile */
+        margin-top: 0;
+    }
+
+    .art-league-text {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .art-league-text h2 {
+        font-size: 2rem;
+    }
+
+    .art-league-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .art-league-text p {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .art-league-text button {
+        height: 40px;
+        width: 120px;
+        font-size: 1rem;
+    }
+
+    .arts-league-section img:nth-of-type(2),
+    .arts-league-section img:last-of-type {
+        width: 80%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .custom-shape-divider-top-1745301266 svg,
+    .custom-shape-divider-bottom-1745301672 svg {
+        height: 80px;
+    }
+}
+
+/* Section 4- Engage Section Styles */
+#engage{
+    padding: 3.33vw;
+    height: auto;
+    background-color: white;
+}
+#engage h3{
+    font-family: "ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 2vw;
+    letter-spacing: 0.067vw;
+    color: lightcoral;
+}
+.engage-navbar{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.engage-navbar a{
+    margin-left: 5.33vw;
+}
+.engage-navbar a figure{
+    height: 10vw;
+    width: 10vw;
+}
+.engage-navbar a figure img{
+    height: 10vw;
+    width: 10vw;
+}
+
+@media screen and (max-width: 600px) {
+    #engage{
+        margin-top: 5vw;
+    }
+    #engage h3{
+        font-size: 4vw;
+    }
+    .engage-navbar {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.33vw;
+      margin-top: 7vw;
+    }
+  
+    .engage-navbar a {
+      margin-left: 0;
+    }
+  
+    .engage-navbar a figure {
+      height: 20vw;
+      width: 20vw;
+    }
+  
+    .engage-navbar a figure img {
+      height: 20vw;
+      width: 20vw;
+    }
+  }
+  
+/* SECTION - 4 : Reviews Styles */
+
+
+#reviews{
+    padding: 3.33vw;
+    background-color: #87BFFF;
+    border-radius: 3.33vw;
+    padding-bottom: 18.66vw;
+    height: auto;
+}
+#reviews h3{
+    font-family: "ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 2vw;
+    letter-spacing: 0.067vw;
+    color: #fff;
+}
+.container-for-reviews{
+    margin-top: 3.33vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comment{
+    border-radius: 1.33vw;
+    height: 20vw;
+    width: 20vw;
+    background-color: transparent;
+    margin-right: 3.33vw;
+}
+.comment-img{
+    border-radius: 1.33vw;
+    height: 20vw;
+    width: 20vw;
+    z-index: -5;
+}
+.comment-img figure{
+    border-radius: 1.33vw;
+    height: 20vw;
+    width: 20vw;
+}
+.comment-img figure img{
+    border-radius: 1.33vw;
+    height: 20vw;
+    width: 20vw;
+}
+
+.comment-text{
+    height: auto;
+    min-height: 21.667vw;
+    width: 20vw;
+    background-color: #00798C;
+    position:relative;
+    z-index: 100;
+    bottom: 20vw;
+    border-radius: 1.33vw;
+    padding: 1.33vw;
+    color: #fff;
+
+    transition-property: bottom, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+.comment-text h5{
+    font-size: 1.3vw; 
+    font-family: "ubuntu", sans-serif; 
+    margin-bottom: 1.33vw;  
+}
+.comment-text p{
+    font-size: 1.1vw;
+    font-family: "ubuntu", sans-serif;
+    margin-bottom: 1.33vw;
+}
+.comment-text q{
+    font-size: 0.9vw;
+    font-family: "ubuntu", sans-serif;
+    line-height: 0.2vw;
+    word-spacing: 0.2vw;
+    letter-spacing: 0.067vw;
+    transition: transform 0.7s ease;
+}
+.comment-text:hover{
+    /* bottom:17vh; */
+    transform: rotateZ(45deg) translateY(12vw);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+
+@media (max-width: 600px) {
+    #reviews h3{
+        font-size: 9vw;
+    }
+    .comment-text h5{
+        font-size: 8vw; 
+        font-family: "ubuntu", sans-serif; 
+        margin-bottom: 0;  
+    }
+    .comment-text p{
+        font-size: 6vw;
+        font-family: "ubuntu", sans-serif;
+        margin-bottom: 0;
+    }
+    .comment-text q{
+        font-size: 4vw;
+        font-family: "ubuntu", sans-serif;
+        line-height: 0.2vw;
+        word-spacing: 0.2vw;
+        letter-spacing: 0.067vw;
+        transition: transform 0.7s ease;
+    }
+    .container-for-reviews {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.66vw; /* adds spacing between stacked cards */
+    }
+
+    .comment {
+        width: 90%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .comment-img,
+    .comment-img figure,
+    .comment-img figure img {
+        width: 100%;
+        height: auto;
+        border-radius: 1.33vw;
+    }
+
+    .comment-text {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 130%;
+        margin-top: -2vw; /* optional overlap look */
+        transform: none !important;
+        transition: none;
+    }
+
+    .comment-text:hover {
+        transform: none;
+        top: 0;
+    }
+}
+ 
+.leave-review{
+    height: 20vw;
+    width: 66.67vw;
+    padding: 1.34vw;
+    background-color: #629460;
+    color: #fff;
+    border-radius: 1.34vw;
+    margin-left: 18vw;
+    padding: 2vw;
+    z-index: 10;
+    display: flex;
+
+    position: relative;
+    z-index: 200;
+    bottom: 9.8vw;
+}
+
+
+.textNform{
+    width: 26.67vw;
+    margin-left: 13.34vw;
+}
+.textNform h3{
+    font-size: 2.5vw;
+    letter-spacing: 0.2vw;
+}
+.textNform form textarea{
+    height: 2vw;
+    margin-top: 1.5vw;
+    width: 13.34vw;
+    border-radius: 3.34vw;
+    padding: 0.34vw  1.34vw;
+    font-size: 1vw;
+}
+.textNform form button{
+    height: 2vw;
+    width: 6vw;
+    border-radius: 2vw;
+    margin-left: 0.67vw;
+    position: relative;
+    bottom: 0.67vw;
+    font-size: 1vw;
+}
+.leave-review figure{
+    height: 13.34vw;
+    width: 13.34vw;
+}
+.leave-review figure img:first-of-type{
+    height: 3.34vw;
+    width: 13.34vw;
+}
+.leave-review figure img:last-of-type{
+    height: 13.33vw;
+    width: 13.33vw;
+}
+.link-in-review{
+    height: 6.67vw;
+    width: 26.67vw;
+}
+.link-in-review img{
+    height: 4.67vw;
+    width: 4.67vw;
+    margin-left: 0.67vw;
+}
+
+@media (max-width: 600px) {
+    .leave-review {
+      flex-direction: column;
+      height: auto;
+      width: 100vw;
+      margin-left: auto;
+      margin-right: auto;
+      bottom: 0; /* stop pushing up */
+      border-radius: 8vw;
+    }
+  
+    .textNform {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 5.2vw;
+      text-align: center;
+    }
+  
+    .textNform h3 {
+      font-size: 7.2vw;
+      letter-spacing: 0.5vw;
+    }
+  
+    .textNform form textarea {
+      width: 80%;
+      height: 4vw;
+      border-radius: 2.6;
+      font-size: 4vw;
+      padding: 6vw;
+    }
+  
+    .textNform form button {
+      width: 20vw;
+      height: 8vw;
+      margin-top: 1vw;
+      font-size: 4vw;
+    }
+  
+    .leave-review figure {
+      margin: 0 28vw;
+      width: 20vw;
+      height: auto;
+    }
+  
+    .leave-review figure img:first-of-type,
+    .leave-review figure img:last-of-type {
+      width: 200%;
+      height: 200%;
+
+      margin-left: 0;
+    }
+  
+    .link-in-review {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .link-in-review img {
+      height: 13.2vw;
+      width: 13.2vw;
+      margin: 2.6vw;
+    }
+    .textNform p{
+        display: inline-block;
+        margin-top: 10vw;
+    }
+  }
+  
+
+/* FOOTER SECTION STYLES */
+
+footer{
+    padding-top: 13.34vw;
+    border-radius: 3.34vw;
+    background-color: #C78283;
+    margin-top: -20vw;
+    height: auto;
+
+}
+.footer-section{
+    height:auto;
+    width: 100%;
+    background-color: #181733;
+}
+.list-info{
+    width: 100%;
+    color: #fff;
+    display: flex;
+    padding-top: 5.3vw;
+    justify-content: space-around;
+}
+.list{
+    width: 13.34vw;
+}
+.list h6{
+    font-size: 1.2vw;
+    font-weight: 700;
+    font-family: "Ubuntu","sans-serif";
+}
+.list ul, .list dl{
+    list-style-type: none;
+    padding-top: 2.34vw;
+}
+.list li, .list dd, .list dt{
+    line-height: 2vw;
+    color: #ffffffbf;
+    font-weight: 300;
+    font-family: "Ubuntu","sans-serif";
+}
+.list dt{
+    font-size: 1.1vw;
+    font-weight: 700;
+}
+.list dd{
+    margin-bottom: 1.34vw;
+}
+.footer-logo-and-name{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3.34vw;
+    color: #fff;
+
+    margin-bottom: 2vw;
+}
+.footer-company-logo{
+    margin-left: 2vw;
+    height: 2.67vw;
+    width: 13.34vw;
+}
+.footer-company-logo figure{
+    height: 2.67vw;
+    width: 13.34vw;
+}
+.footer-company-logo figure img{
+    height: 2.67vw;
+    width: 13.34vw;
+}
+.footer-logo-and-name #about-us{
+    width: 53.34vw;
+    margin-left: 6.67vw;
+    text-align: justify;
+}
+.footer-logo-and-name #about-us h5{
+    font-family: "Ubuntu", "sans-serif";
+    font-weight: 700;
+    font-size: 1.4vw;
+    text-align: center;
+    padding-bottom: 2.67vw;
+    text-decoration: underline white;
+}
+.footer-logo-and-name #about-us p{
+    font-family: "Ubuntu", "sans-serif";
+}
+
+
+.footer-legal-info{
+    width: 100%;
+    background: linear-gradient(320deg, #eb92be,#ffef78,#63c9b4);
+    color: #fff;
+}
+.footer-legal-info-container{
+    width: 100%;
+    background-color: #744253;
+    display: flex;
+    padding: 3.33vw;
+}
+.copyright-info{
+    width: 45vw;
+    padding-left: 0.67vw;
+
+}
+.copyright-info p{
+    font-size: 0.95vw;
+    font-weight: 300;
+    padding-left: 0.34vw;
+    color: #ffffffbf;
+}
+.copyright-info span{
+    font-size: 0.95vw;
+    font-weight: 500;
+}
+.legal-tabs{
+    width: 55vw;
+}
+.legal-tabs ul{
+    display: flex;
+    list-style-type: none;
+}
+.legal-tabs li{
+    padding-left: 0.84vw;
+    padding-right: 0.84vw;
+    font-size: 0.85vw;
+    font-weight: 300;
+    color: #ffffffbf;
+    border-right: 0.05vw solid rgb(126, 120, 120);
+}
+#last-tab{
+    border: none;
+}
+
+#products {
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    footer {
+      transform: none; /* remove upward shift on mobile */
+      padding-top: 0;
+      border-radius: 8vw;
+      height: auto;
+
+      margin: 0;
+    }
+  
+    .footer-section {
+      height: auto;
+      padding: 5.36vw 2.8vw;
+    }
+
+    .list-info {
+        height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4vw;
+      padding-top: 10.68vw;
+    }
+  
+    .list {
+      width: 30%; 
+      min-width: 13vw;
+      text-align: center;
+      height: auto;
+    }
+  
+    .list h6 {
+      font-size: 4vw;
+      margin-bottom: 1.8vw;
+    }
+  
+    .list ul, .list dl {
+      padding-top: 4vw;
+    }
+  
+    .list li, .list dd, .list dt {
+      font-size: 3.5vw;
+      line-height: 5vw;
+    }
+  
+    .list dt {
+      font-size: 4vw;
+    }
+  
+    .footer-logo-and-name {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      margin-top: 6vw;
+      padding: 0 2.4vw;
+      text-align: center;
+    }
+  
+    .footer-company-logo {
+      margin-left: -7vw;
+      margin-bottom: 4vw;
+    }
+  
+    .footer-company-logo figure img {
+      width: 20vw;
+      height: 5vw;
+    }
+  
+    .footer-logo-and-name #about-us {
+      width: 100%;
+      margin-left: 0;
+      
+    }
+  
+    .footer-logo-and-name #about-us h5 {
+        display: block;
+      font-size: 3vw;
+      padding-bottom: 1.34vw;
+    }
+    .footer-logo-and-name #about-us p{
+        display: inline-block;
+    }
+  
+    .footer-legal-info {
+        /* margin-top: 30vw; */
+    }
+  
+    .footer-legal-info-container {
+      flex-direction: column;
+      align-items: center;
+      height: 32vw;
+      padding: 4vw 2vw;
+      text-align: center;
+      gap: 4vw;
+
+      margin-top: auto;
+    }
+  
+    .copyright-info,
+    .legal-tabs {
+      width: 100%;
+    }
+    .copyright-info span{
+        font-size: 2vw;
+    }
+    .copyright-info p{
+        font-size: 1.5;
+    }
+  
+    .legal-tabs ul {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2.5vw;
+    }
+  
+    .legal-tabs li {
+      border: none;
+      padding: 1.2vw 2.4vw;
+      font-size: 3.5vw;
+    }
+
+    
+  }
+  
